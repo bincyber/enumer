@@ -151,3 +151,8 @@ func (i *Prime) Scan(value interface{}) error {
 	*i = val
 	return nil
 }
+
+var (
+	_ driver.Valuer = (*Prime)(nil)
+	_ sql.Scanner   = (*Prime)(nil)
+)
